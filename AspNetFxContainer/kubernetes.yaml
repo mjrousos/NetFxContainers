@@ -17,16 +17,20 @@ spec:
       labels:
         app: webapp-pod
     spec:
+      nodeSelector:
+        "kubernetes.io/os": windows
       containers:
       - name: webapp-container
-        image: mikerouaks.azurecr.io/mjrousos/aspnet-sample:latest
+        image: mikerouaks.azurecr.io/mjrousos/aspnet-sample:1.0
         resources:
           limits:
-            cpu: 2000m
+            cpu: 500m
             memory: 1000M
           requests:
-            cpu: 1000m
+            cpu: 250m
             memory: 500M
+        ports:
+        - containerPort: 80
 
 ---
 

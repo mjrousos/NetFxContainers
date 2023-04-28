@@ -10,6 +10,6 @@ RUN msbuild /t:restore
 COPY . .
 RUN msbuild /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
 
-FROM mcr.microsoft.com/dotnet/framework/aspnet:4.8-windowsservercore-ltsc2019
+FROM mcr.microsoft.com/dotnet/framework/aspnet:4.8-windowsservercore-ltsc2022
 WORKDIR /inetpub/wwwroot
 COPY --from=build /src/WebFormsApp/bin/app.publish .
