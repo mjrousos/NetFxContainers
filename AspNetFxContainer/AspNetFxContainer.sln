@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33103.201
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebFormsApp", "WebFormsApp\WebFormsApp.csproj", "{ED040C91-F881-4C52-BFB2-33464F6BAA74}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{0E302E77-0F41-4F2E-98F6-AB53EF83438D}"
+	ProjectSection(SolutionItems) = preProject
+		Dockerfile = Dockerfile
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ED040C91-F881-4C52-BFB2-33464F6BAA74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED040C91-F881-4C52-BFB2-33464F6BAA74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED040C91-F881-4C52-BFB2-33464F6BAA74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED040C91-F881-4C52-BFB2-33464F6BAA74}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {47B4F7F0-0389-48F5-BBE2-30126DED2E01}
+	EndGlobalSection
+EndGlobal

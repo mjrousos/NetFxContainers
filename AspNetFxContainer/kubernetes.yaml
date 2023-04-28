@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: webapp-deployment
+  labels:
+    # The name and app label on the deployment, spec (pod), and container often share a name
+    # (which is ok because they a labeling different types), but I've used different names
+    # here to make it clear they're different labels.
+    app: webapp-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: webapp-pod
+  template:
+    metadata:
+      labels:
+        app: webapp-pod
+    spec:
+      containers:
+      - name: webapp-container
+        image: mikerouaks.azurecr.io/mjrousos/aspnet-sample:latest
+        resources:
+          limits:
+            cpu: 2000m
+            memory: 1000M
+          requests:
+            cpu: 1000m
+            memory: 500M
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: webapp-service
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+  selector:
+    app: webapp-pod
