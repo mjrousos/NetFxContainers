@@ -6,7 +6,7 @@ WORKDIR /src
 COPY ["AspNetFxContainer.sln", "AspNetFxContainer.sln"]
 COPY ["./WebFormsApp/*.csproj", "./WebFormsApp/"]
 COPY ["./WebFormsApp/*.config", "./WebFormsApp/"]
-RUN msbuild /t:restore
+RUN msbuild /t:restore /p:RestorePackagesConfig=true AspNetFxContainer.sln
 COPY . .
 RUN msbuild /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
 
